@@ -69,7 +69,7 @@
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background: #000;
+	background: #fff;
 }
 
 #fancybox-content {
@@ -83,6 +83,9 @@
 	border: 0px solid #000;
 }
 
+#fancybox-content > div {
+	padding: 20px;
+}
 #fancybox-hide-sel-frame {
 	position: absolute;
 	top: 0;

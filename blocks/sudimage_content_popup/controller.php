@@ -6,9 +6,6 @@
 		protected $btInterfaceWidth = 300;
 		protected $btInterfaceHeight = 520;
 		protected $btTable = 'btSudimageContentPopup';
-		/*protected $btCacheBlockOutput = true;
-		protected $btCacheBlockOutputOnPost = true;
-		protected $btCacheBlockOutputForRegisteredUsers = true;*/
 
 		/** 
 		 * Used for localization. If we want to localize the name/description we have to include this
@@ -106,7 +103,10 @@
 		public function on_page_view() {
 			$html = Loader::helper('html');
 			$this->addHeaderItem($html->css('jquery.fancybox-1.3.4.css','sudimage_content_popup'));
-			$this->addHeaderItem('<script type="text/javascript">$(document).ready(function() { $(\'.fancybox-link\').fancybox({width:820,height:470});});</script>');
+			$this->addHeaderItem($html->javascript('jquery.easing-1.3.pack.js','sudimage_content_popup'));
+			$this->addHeaderItem($html->javascript('jquery.mousewheel-3.0.4.pack.js','sudimage_content_popup'));
+			$this->addHeaderItem($html->javascript('jquery.fancybox-1.3.4.pack.js','sudimage_content_popup'));
+			$this->addHeaderItem('<script type="text/javascript">$(document).ready(function() { $(".fancybox-link").fancybox({padding:2});});</script>');
 		}
 
 	}
